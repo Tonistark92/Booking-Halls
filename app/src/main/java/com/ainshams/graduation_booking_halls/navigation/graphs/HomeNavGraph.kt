@@ -32,6 +32,7 @@ fun HomeNavGraph(navController: NavHostController,nav: NavHostController) {
         composable(route =  HallsScreans.BookingScreen.name) {
             FilterScreen(navController)
         }
+
         composable(route =  "filter") {
             FilterScreenWithAction(){ id:Int, start:LocalTime, end: LocalTime, date: LocalDate ->
                 navController.navigate(DetailsScreen.CheckOut.route+"/".plus(id.toString())+"/".plus(start.toString())+"/".plus(end.toString())+"/".plus(date.toString()))
